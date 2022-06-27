@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MarvelApp</string>
+    <string name="error_connection">Connection Error</string>
+    <string name="error_unknown">Unknown Error</string>
+    <string name="error_unexpected">Unexpected Error</string>
+    <string name="common_empty_list">No data</string>
+    <string name="common_published">Published:</string>
+    <string name="common_retry">Retry</string>
+    <string name="common_characters">Characters</string>
+    <string name="common_comics">Comics</string>
+    <string name="common_character_detail">Character\'s detail</string>
+    <string name="common_comic_detail">Comic\'s detail</string>
+</resources>

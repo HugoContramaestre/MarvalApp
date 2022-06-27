@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.talentomobile.domain.common.Character" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        style="@style/ItemCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/item_padding_top"
+            android:paddingHorizontal="@dimen/item_padding_horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/character_image"
+                style="@style/ItemImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:loadImage="@{item.thumbnail.largeStandard}"
+                app:layout_constraintVertical_bias="0"
+                tools:src="@drawable/placeholder_avatar"
+                />
+
+            <TextView
+                android:id="@+id/character_name"
+                style="@style/ItemText.Title"
+                android:layout_width="0dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                app:layout_constraintTop_toTopOf="@+id/character_image"
+                app:layout_constraintStart_toEndOf="@+id/character_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                android:text="@{item.name}"
+                tools:text="Super mario"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
